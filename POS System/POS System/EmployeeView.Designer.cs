@@ -30,38 +30,38 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this._2060_Term_ProjectDataSet = new POS_System._2060_Term_ProjectDataSet();
-            this.termProjectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.billingAddressesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.billing_AddressesTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.Billing_AddressesTableAdapter();
-            this.transactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.transactionsTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.TransactionsTableAdapter();
             this.transactionIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oRDERIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.creditCardDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.billingAddressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.transactionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._2060_Term_ProjectDataSet = new POS_System._2060_Term_ProjectDataSet();
+            this.termProjectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.billingAddressesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.billing_AddressesTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.Billing_AddressesTableAdapter();
+            this.transactionsTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.TransactionsTableAdapter();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemsTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.ItemsTableAdapter();
             this.itemIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.itemPriceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.inventoryQuantityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemsTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.ItemsTableAdapter();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.customersTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.CustomersTableAdapter();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customersTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.CustomersTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._2060_Term_ProjectDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.termProjectDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.billingAddressesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transactionsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -81,38 +81,11 @@
             this.creditCardDataGridViewTextBoxColumn,
             this.billingAddressDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.transactionsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(64, 64);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 33);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(774, 206);
+            this.dataGridView1.Size = new System.Drawing.Size(641, 189);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // _2060_Term_ProjectDataSet
-            // 
-            this._2060_Term_ProjectDataSet.DataSetName = "_2060_Term_ProjectDataSet";
-            this._2060_Term_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // termProjectDataSetBindingSource
-            // 
-            this.termProjectDataSetBindingSource.DataSource = this._2060_Term_ProjectDataSet;
-            this.termProjectDataSetBindingSource.Position = 0;
-            // 
-            // billingAddressesBindingSource
-            // 
-            this.billingAddressesBindingSource.DataMember = "Billing Addresses";
-            this.billingAddressesBindingSource.DataSource = this._2060_Term_ProjectDataSet;
-            // 
-            // billing_AddressesTableAdapter
-            // 
-            this.billing_AddressesTableAdapter.ClearBeforeFill = true;
-            // 
-            // transactionsBindingSource
-            // 
-            this.transactionsBindingSource.DataMember = "Transactions";
-            this.transactionsBindingSource.DataSource = this._2060_Term_ProjectDataSet;
-            // 
-            // transactionsTableAdapter
-            // 
-            this.transactionsTableAdapter.ClearBeforeFill = true;
             // 
             // transactionIDDataGridViewTextBoxColumn
             // 
@@ -150,6 +123,34 @@
             this.billingAddressDataGridViewTextBoxColumn.HeaderText = "BillingAddress";
             this.billingAddressDataGridViewTextBoxColumn.Name = "billingAddressDataGridViewTextBoxColumn";
             // 
+            // transactionsBindingSource
+            // 
+            this.transactionsBindingSource.DataMember = "Transactions";
+            this.transactionsBindingSource.DataSource = this._2060_Term_ProjectDataSet;
+            // 
+            // _2060_Term_ProjectDataSet
+            // 
+            this._2060_Term_ProjectDataSet.DataSetName = "_2060_Term_ProjectDataSet";
+            this._2060_Term_ProjectDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // termProjectDataSetBindingSource
+            // 
+            this.termProjectDataSetBindingSource.DataSource = this._2060_Term_ProjectDataSet;
+            this.termProjectDataSetBindingSource.Position = 0;
+            // 
+            // billingAddressesBindingSource
+            // 
+            this.billingAddressesBindingSource.DataMember = "Billing Addresses";
+            this.billingAddressesBindingSource.DataSource = this._2060_Term_ProjectDataSet;
+            // 
+            // billing_AddressesTableAdapter
+            // 
+            this.billing_AddressesTableAdapter.ClearBeforeFill = true;
+            // 
+            // transactionsTableAdapter
+            // 
+            this.transactionsTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridView2
             // 
             this.dataGridView2.AutoGenerateColumns = false;
@@ -161,20 +162,12 @@
             this.inventoryQuantityDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.itemsBindingSource;
-            this.dataGridView2.Location = new System.Drawing.Point(64, 328);
+            this.dataGridView2.Location = new System.Drawing.Point(32, 248);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 33;
-            this.dataGridView2.Size = new System.Drawing.Size(774, 186);
+            this.dataGridView2.Size = new System.Drawing.Size(543, 295);
             this.dataGridView2.TabIndex = 1;
-            // 
-            // itemsBindingSource
-            // 
-            this.itemsBindingSource.DataMember = "Items";
-            this.itemsBindingSource.DataSource = this._2060_Term_ProjectDataSet;
-            // 
-            // itemsTableAdapter
-            // 
-            this.itemsTableAdapter.ClearBeforeFill = true;
             // 
             // itemIDDataGridViewTextBoxColumn
             // 
@@ -206,6 +199,15 @@
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
             // 
+            // itemsBindingSource
+            // 
+            this.itemsBindingSource.DataMember = "Items";
+            this.itemsBindingSource.DataSource = this._2060_Term_ProjectDataSet;
+            // 
+            // itemsTableAdapter
+            // 
+            this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
             // dataGridView3
             // 
             this.dataGridView3.AutoGenerateColumns = false;
@@ -216,20 +218,12 @@
             this.firstNameDataGridViewTextBoxColumn,
             this.lastNameDataGridViewTextBoxColumn});
             this.dataGridView3.DataSource = this.customersBindingSource;
-            this.dataGridView3.Location = new System.Drawing.Point(64, 584);
+            this.dataGridView3.Location = new System.Drawing.Point(588, 248);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 33;
-            this.dataGridView3.Size = new System.Drawing.Size(774, 174);
+            this.dataGridView3.Size = new System.Drawing.Size(443, 295);
             this.dataGridView3.TabIndex = 2;
-            // 
-            // customersBindingSource
-            // 
-            this.customersBindingSource.DataMember = "Customers";
-            this.customersBindingSource.DataSource = this._2060_Term_ProjectDataSet;
-            // 
-            // customersTableAdapter
-            // 
-            this.customersTableAdapter.ClearBeforeFill = true;
             // 
             // emailDataGridViewTextBoxColumn
             // 
@@ -255,22 +249,32 @@
             this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
             // 
+            // customersBindingSource
+            // 
+            this.customersBindingSource.DataMember = "Customers";
+            this.customersBindingSource.DataSource = this._2060_Term_ProjectDataSet;
+            // 
+            // customersTableAdapter
+            // 
+            this.customersTableAdapter.ClearBeforeFill = true;
+            // 
             // EmployeeView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1288, 808);
+            this.ClientSize = new System.Drawing.Size(1042, 554);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmployeeView";
             this.Text = "EmployeeView";
             this.Load += new System.EventHandler(this.EmployeeView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.transactionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._2060_Term_ProjectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.termProjectDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.billingAddressesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.transactionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
