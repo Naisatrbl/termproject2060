@@ -24,7 +24,7 @@ namespace POS_System {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class _2060_Term_ProjectDataSet : global::System.Data.DataSet {
         
-        private Billing_AddressesDataTable tableBilling_Addresses;
+        private BillingAddressesDataTable tableBillingAddresses;
         
         private Credit_CardsDataTable tableCredit_Cards;
         
@@ -82,8 +82,8 @@ namespace POS_System {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Billing Addresses"] != null)) {
-                    base.Tables.Add(new Billing_AddressesDataTable(ds.Tables["Billing Addresses"]));
+                if ((ds.Tables["BillingAddresses"] != null)) {
+                    base.Tables.Add(new BillingAddressesDataTable(ds.Tables["BillingAddresses"]));
                 }
                 if ((ds.Tables["Credit Cards"] != null)) {
                     base.Tables.Add(new Credit_CardsDataTable(ds.Tables["Credit Cards"]));
@@ -131,9 +131,9 @@ namespace POS_System {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Billing_AddressesDataTable Billing_Addresses {
+        public BillingAddressesDataTable BillingAddresses {
             get {
-                return this.tableBilling_Addresses;
+                return this.tableBillingAddresses;
             }
         }
         
@@ -284,8 +284,8 @@ namespace POS_System {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Billing Addresses"] != null)) {
-                    base.Tables.Add(new Billing_AddressesDataTable(ds.Tables["Billing Addresses"]));
+                if ((ds.Tables["BillingAddresses"] != null)) {
+                    base.Tables.Add(new BillingAddressesDataTable(ds.Tables["BillingAddresses"]));
                 }
                 if ((ds.Tables["Credit Cards"] != null)) {
                     base.Tables.Add(new Credit_CardsDataTable(ds.Tables["Credit Cards"]));
@@ -344,10 +344,10 @@ namespace POS_System {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableBilling_Addresses = ((Billing_AddressesDataTable)(base.Tables["Billing Addresses"]));
+            this.tableBillingAddresses = ((BillingAddressesDataTable)(base.Tables["BillingAddresses"]));
             if ((initTable == true)) {
-                if ((this.tableBilling_Addresses != null)) {
-                    this.tableBilling_Addresses.InitVars();
+                if ((this.tableBillingAddresses != null)) {
+                    this.tableBillingAddresses.InitVars();
                 }
             }
             this.tableCredit_Cards = ((Credit_CardsDataTable)(base.Tables["Credit Cards"]));
@@ -414,8 +414,8 @@ namespace POS_System {
             this.Namespace = "http://tempuri.org/_2060_Term_ProjectDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableBilling_Addresses = new Billing_AddressesDataTable();
-            base.Tables.Add(this.tableBilling_Addresses);
+            this.tableBillingAddresses = new BillingAddressesDataTable();
+            base.Tables.Add(this.tableBillingAddresses);
             this.tableCredit_Cards = new Credit_CardsDataTable();
             base.Tables.Add(this.tableCredit_Cards);
             this.tableCustomers = new CustomersDataTable();
@@ -437,7 +437,7 @@ namespace POS_System {
                         this.tableOrder_Details.Item_IDColumn}, false);
             this.Relations.Add(this.relationItemsOrder_Items);
             this.relationBilling_AddressesTransactions = new global::System.Data.DataRelation("Billing AddressesTransactions", new global::System.Data.DataColumn[] {
-                        this.tableBilling_Addresses.AddressColumn}, new global::System.Data.DataColumn[] {
+                        this.tableBillingAddresses.AddressColumn}, new global::System.Data.DataColumn[] {
                         this.tableTransactions.BillingAddressColumn}, false);
             this.Relations.Add(this.relationBilling_AddressesTransactions);
             this.relationCredit_CardsTransactions = new global::System.Data.DataRelation("Credit CardsTransactions", new global::System.Data.DataColumn[] {
@@ -460,7 +460,7 @@ namespace POS_System {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeBilling_Addresses() {
+        private bool ShouldSerializeBillingAddresses() {
             return false;
         }
         
@@ -568,7 +568,7 @@ namespace POS_System {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void Billing_AddressesRowChangeEventHandler(object sender, Billing_AddressesRowChangeEvent e);
+        public delegate void BillingAddressesRowChangeEventHandler(object sender, BillingAddressesRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void Credit_CardsRowChangeEventHandler(object sender, Credit_CardsRowChangeEvent e);
@@ -599,7 +599,7 @@ namespace POS_System {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Billing_AddressesDataTable : global::System.Data.TypedTableBase<Billing_AddressesRow> {
+        public partial class BillingAddressesDataTable : global::System.Data.TypedTableBase<BillingAddressesRow> {
             
             private global::System.Data.DataColumn columnCustomer_Email;
             
@@ -615,8 +615,8 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Billing_AddressesDataTable() {
-                this.TableName = "Billing Addresses";
+            public BillingAddressesDataTable() {
+                this.TableName = "BillingAddresses";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -624,7 +624,7 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Billing_AddressesDataTable(global::System.Data.DataTable table) {
+            internal BillingAddressesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -641,7 +641,7 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected Billing_AddressesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected BillingAddressesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -705,34 +705,34 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Billing_AddressesRow this[int index] {
+            public BillingAddressesRow this[int index] {
                 get {
-                    return ((Billing_AddressesRow)(this.Rows[index]));
+                    return ((BillingAddressesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Billing_AddressesRowChangeEventHandler Billing_AddressesRowChanging;
+            public event BillingAddressesRowChangeEventHandler BillingAddressesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Billing_AddressesRowChangeEventHandler Billing_AddressesRowChanged;
+            public event BillingAddressesRowChangeEventHandler BillingAddressesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Billing_AddressesRowChangeEventHandler Billing_AddressesRowDeleting;
+            public event BillingAddressesRowChangeEventHandler BillingAddressesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Billing_AddressesRowChangeEventHandler Billing_AddressesRowDeleted;
+            public event BillingAddressesRowChangeEventHandler BillingAddressesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddBilling_AddressesRow(Billing_AddressesRow row) {
+            public void AddBillingAddressesRow(BillingAddressesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Billing_AddressesRow AddBilling_AddressesRow(string Customer_Email, string Address, string City, string State, string Country, int _Area_Zip_Code) {
-                Billing_AddressesRow rowBilling_AddressesRow = ((Billing_AddressesRow)(this.NewRow()));
+            public BillingAddressesRow AddBillingAddressesRow(string Customer_Email, string Address, string City, string State, string Country, int _Area_Zip_Code) {
+                BillingAddressesRow rowBillingAddressesRow = ((BillingAddressesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         Customer_Email,
                         Address,
@@ -740,22 +740,22 @@ namespace POS_System {
                         State,
                         Country,
                         _Area_Zip_Code};
-                rowBilling_AddressesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowBilling_AddressesRow);
-                return rowBilling_AddressesRow;
+                rowBillingAddressesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowBillingAddressesRow);
+                return rowBillingAddressesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Billing_AddressesRow FindByAddress(string Address) {
-                return ((Billing_AddressesRow)(this.Rows.Find(new object[] {
+            public BillingAddressesRow FindByAddress(string Address) {
+                return ((BillingAddressesRow)(this.Rows.Find(new object[] {
                             Address})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Billing_AddressesDataTable cln = ((Billing_AddressesDataTable)(base.Clone()));
+                BillingAddressesDataTable cln = ((BillingAddressesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -763,7 +763,7 @@ namespace POS_System {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Billing_AddressesDataTable();
+                return new BillingAddressesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -807,28 +807,28 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Billing_AddressesRow NewBilling_AddressesRow() {
-                return ((Billing_AddressesRow)(this.NewRow()));
+            public BillingAddressesRow NewBillingAddressesRow() {
+                return ((BillingAddressesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Billing_AddressesRow(builder);
+                return new BillingAddressesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Billing_AddressesRow);
+                return typeof(BillingAddressesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Billing_AddressesRowChanged != null)) {
-                    this.Billing_AddressesRowChanged(this, new Billing_AddressesRowChangeEvent(((Billing_AddressesRow)(e.Row)), e.Action));
+                if ((this.BillingAddressesRowChanged != null)) {
+                    this.BillingAddressesRowChanged(this, new BillingAddressesRowChangeEvent(((BillingAddressesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -836,8 +836,8 @@ namespace POS_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Billing_AddressesRowChanging != null)) {
-                    this.Billing_AddressesRowChanging(this, new Billing_AddressesRowChangeEvent(((Billing_AddressesRow)(e.Row)), e.Action));
+                if ((this.BillingAddressesRowChanging != null)) {
+                    this.BillingAddressesRowChanging(this, new BillingAddressesRowChangeEvent(((BillingAddressesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -845,8 +845,8 @@ namespace POS_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Billing_AddressesRowDeleted != null)) {
-                    this.Billing_AddressesRowDeleted(this, new Billing_AddressesRowChangeEvent(((Billing_AddressesRow)(e.Row)), e.Action));
+                if ((this.BillingAddressesRowDeleted != null)) {
+                    this.BillingAddressesRowDeleted(this, new BillingAddressesRowChangeEvent(((BillingAddressesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -854,14 +854,14 @@ namespace POS_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Billing_AddressesRowDeleting != null)) {
-                    this.Billing_AddressesRowDeleting(this, new Billing_AddressesRowChangeEvent(((Billing_AddressesRow)(e.Row)), e.Action));
+                if ((this.BillingAddressesRowDeleting != null)) {
+                    this.BillingAddressesRowDeleting(this, new BillingAddressesRowChangeEvent(((BillingAddressesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveBilling_AddressesRow(Billing_AddressesRow row) {
+            public void RemoveBillingAddressesRow(BillingAddressesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -888,7 +888,7 @@ namespace POS_System {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Billing_AddressesDataTable";
+                attribute2.FixedValue = "BillingAddressesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1542,7 +1542,7 @@ namespace POS_System {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EmployeesDataTable : global::System.Data.TypedTableBase<EmployeesRow> {
             
-            private global::System.Data.DataColumn _columnE_mail;
+            private global::System.Data.DataColumn columnEmail;
             
             private global::System.Data.DataColumn columnPassword;
             
@@ -1581,9 +1581,9 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn _E_mailColumn {
+            public global::System.Data.DataColumn EmailColumn {
                 get {
-                    return this._columnE_mail;
+                    return this.columnEmail;
                 }
             }
             
@@ -1632,10 +1632,10 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmployeesRow AddEmployeesRow(string _E_mail, string Password) {
+            public EmployeesRow AddEmployeesRow(string Email, string Password) {
                 EmployeesRow rowEmployeesRow = ((EmployeesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        _E_mail,
+                        Email,
                         Password};
                 rowEmployeesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmployeesRow);
@@ -1644,9 +1644,9 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public EmployeesRow FindBy_E_mail(string _E_mail) {
+            public EmployeesRow FindByEmail(string Email) {
                 return ((EmployeesRow)(this.Rows.Find(new object[] {
-                            _E_mail})));
+                            Email})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1666,24 +1666,22 @@ namespace POS_System {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this._columnE_mail = base.Columns["E-mail"];
+                this.columnEmail = base.Columns["Email"];
                 this.columnPassword = base.Columns["Password"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this._columnE_mail = new global::System.Data.DataColumn("E-mail", typeof(string), null, global::System.Data.MappingType.Element);
-                this._columnE_mail.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "_columnE_mail");
-                this._columnE_mail.ExtendedProperties.Add("Generator_UserColumnName", "E-mail");
-                base.Columns.Add(this._columnE_mail);
+                this.columnEmail = new global::System.Data.DataColumn("Email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmail);
                 this.columnPassword = new global::System.Data.DataColumn("Password", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPassword);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this._columnE_mail}, true));
-                this._columnE_mail.AllowDBNull = false;
-                this._columnE_mail.Unique = true;
-                this._columnE_mail.MaxLength = 50;
+                                this.columnEmail}, true));
+                this.columnEmail.AllowDBNull = false;
+                this.columnEmail.Unique = true;
+                this.columnEmail.MaxLength = 50;
                 this.columnPassword.MaxLength = 255;
             }
             
@@ -3168,7 +3166,7 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public TransactionsRow AddTransactionsRow(CustomersRow parentCustomersRowByCustomersTransactions, Order_DetailsRow parentOrder_DetailsRowByOrder_DetailsTransactions, Shipping_AddressesRow parentShipping_AddressesRowByShipping_AddressesTransactions, Credit_CardsRow parentCredit_CardsRowByCredit_CardsTransactions, Billing_AddressesRow parentBilling_AddressesRowByBilling_AddressesTransactions) {
+            public TransactionsRow AddTransactionsRow(CustomersRow parentCustomersRowByCustomersTransactions, Order_DetailsRow parentOrder_DetailsRowByOrder_DetailsTransactions, Shipping_AddressesRow parentShipping_AddressesRowByShipping_AddressesTransactions, Credit_CardsRow parentCredit_CardsRowByCredit_CardsTransactions, BillingAddressesRow parentBillingAddressesRowByBilling_AddressesTransactions) {
                 TransactionsRow rowTransactionsRow = ((TransactionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3189,8 +3187,8 @@ namespace POS_System {
                 if ((parentCredit_CardsRowByCredit_CardsTransactions != null)) {
                     columnValuesArray[4] = parentCredit_CardsRowByCredit_CardsTransactions[1];
                 }
-                if ((parentBilling_AddressesRowByBilling_AddressesTransactions != null)) {
-                    columnValuesArray[5] = parentBilling_AddressesRowByBilling_AddressesTransactions[1];
+                if ((parentBillingAddressesRowByBilling_AddressesTransactions != null)) {
+                    columnValuesArray[5] = parentBillingAddressesRowByBilling_AddressesTransactions[1];
                 }
                 rowTransactionsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTransactionsRow);
@@ -3385,15 +3383,15 @@ namespace POS_System {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Billing_AddressesRow : global::System.Data.DataRow {
+        public partial class BillingAddressesRow : global::System.Data.DataRow {
             
-            private Billing_AddressesDataTable tableBilling_Addresses;
+            private BillingAddressesDataTable tableBillingAddresses;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Billing_AddressesRow(global::System.Data.DataRowBuilder rb) : 
+            internal BillingAddressesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableBilling_Addresses = ((Billing_AddressesDataTable)(this.Table));
+                this.tableBillingAddresses = ((BillingAddressesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3401,14 +3399,14 @@ namespace POS_System {
             public string Customer_Email {
                 get {
                     try {
-                        return ((string)(this[this.tableBilling_Addresses.Customer_EmailColumn]));
+                        return ((string)(this[this.tableBillingAddresses.Customer_EmailColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Customer Email\' in table \'Billing Addresses\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Customer Email\' in table \'BillingAddresses\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBilling_Addresses.Customer_EmailColumn] = value;
+                    this[this.tableBillingAddresses.Customer_EmailColumn] = value;
                 }
             }
             
@@ -3416,10 +3414,10 @@ namespace POS_System {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string Address {
                 get {
-                    return ((string)(this[this.tableBilling_Addresses.AddressColumn]));
+                    return ((string)(this[this.tableBillingAddresses.AddressColumn]));
                 }
                 set {
-                    this[this.tableBilling_Addresses.AddressColumn] = value;
+                    this[this.tableBillingAddresses.AddressColumn] = value;
                 }
             }
             
@@ -3428,14 +3426,14 @@ namespace POS_System {
             public string City {
                 get {
                     try {
-                        return ((string)(this[this.tableBilling_Addresses.CityColumn]));
+                        return ((string)(this[this.tableBillingAddresses.CityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'City\' in table \'Billing Addresses\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'City\' in table \'BillingAddresses\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBilling_Addresses.CityColumn] = value;
+                    this[this.tableBillingAddresses.CityColumn] = value;
                 }
             }
             
@@ -3444,14 +3442,14 @@ namespace POS_System {
             public string State {
                 get {
                     try {
-                        return ((string)(this[this.tableBilling_Addresses.StateColumn]));
+                        return ((string)(this[this.tableBillingAddresses.StateColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'State\' in table \'Billing Addresses\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'State\' in table \'BillingAddresses\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBilling_Addresses.StateColumn] = value;
+                    this[this.tableBillingAddresses.StateColumn] = value;
                 }
             }
             
@@ -3460,14 +3458,14 @@ namespace POS_System {
             public string Country {
                 get {
                     try {
-                        return ((string)(this[this.tableBilling_Addresses.CountryColumn]));
+                        return ((string)(this[this.tableBillingAddresses.CountryColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Country\' in table \'Billing Addresses\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Country\' in table \'BillingAddresses\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBilling_Addresses.CountryColumn] = value;
+                    this[this.tableBillingAddresses.CountryColumn] = value;
                 }
             }
             
@@ -3476,75 +3474,75 @@ namespace POS_System {
             public int _Area_Zip_Code {
                 get {
                     try {
-                        return ((int)(this[this.tableBilling_Addresses._Area_Zip_CodeColumn]));
+                        return ((int)(this[this.tableBillingAddresses._Area_Zip_CodeColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Area/Zip Code\' in table \'Billing Addresses\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Area/Zip Code\' in table \'BillingAddresses\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableBilling_Addresses._Area_Zip_CodeColumn] = value;
+                    this[this.tableBillingAddresses._Area_Zip_CodeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCustomer_EmailNull() {
-                return this.IsNull(this.tableBilling_Addresses.Customer_EmailColumn);
+                return this.IsNull(this.tableBillingAddresses.Customer_EmailColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCustomer_EmailNull() {
-                this[this.tableBilling_Addresses.Customer_EmailColumn] = global::System.Convert.DBNull;
+                this[this.tableBillingAddresses.Customer_EmailColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCityNull() {
-                return this.IsNull(this.tableBilling_Addresses.CityColumn);
+                return this.IsNull(this.tableBillingAddresses.CityColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCityNull() {
-                this[this.tableBilling_Addresses.CityColumn] = global::System.Convert.DBNull;
+                this[this.tableBillingAddresses.CityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsStateNull() {
-                return this.IsNull(this.tableBilling_Addresses.StateColumn);
+                return this.IsNull(this.tableBillingAddresses.StateColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetStateNull() {
-                this[this.tableBilling_Addresses.StateColumn] = global::System.Convert.DBNull;
+                this[this.tableBillingAddresses.StateColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCountryNull() {
-                return this.IsNull(this.tableBilling_Addresses.CountryColumn);
+                return this.IsNull(this.tableBillingAddresses.CountryColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCountryNull() {
-                this[this.tableBilling_Addresses.CountryColumn] = global::System.Convert.DBNull;
+                this[this.tableBillingAddresses.CountryColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool Is_Area_Zip_CodeNull() {
-                return this.IsNull(this.tableBilling_Addresses._Area_Zip_CodeColumn);
+                return this.IsNull(this.tableBillingAddresses._Area_Zip_CodeColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void Set_Area_Zip_CodeNull() {
-                this[this.tableBilling_Addresses._Area_Zip_CodeColumn] = global::System.Convert.DBNull;
+                this[this.tableBillingAddresses._Area_Zip_CodeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3817,12 +3815,12 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string _E_mail {
+            public string Email {
                 get {
-                    return ((string)(this[this.tableEmployees._E_mailColumn]));
+                    return ((string)(this[this.tableEmployees.EmailColumn]));
                 }
                 set {
-                    this[this.tableEmployees._E_mailColumn] = value;
+                    this[this.tableEmployees.EmailColumn] = value;
                 }
             }
             
@@ -4446,9 +4444,9 @@ namespace POS_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Billing_AddressesRow Billing_AddressesRow {
+            public BillingAddressesRow BillingAddressesRow {
                 get {
-                    return ((Billing_AddressesRow)(this.GetParentRow(this.Table.ParentRelations["Billing AddressesTransactions"])));
+                    return ((BillingAddressesRow)(this.GetParentRow(this.Table.ParentRelations["Billing AddressesTransactions"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["Billing AddressesTransactions"]);
@@ -4564,22 +4562,22 @@ namespace POS_System {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class Billing_AddressesRowChangeEvent : global::System.EventArgs {
+        public class BillingAddressesRowChangeEvent : global::System.EventArgs {
             
-            private Billing_AddressesRow eventRow;
+            private BillingAddressesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Billing_AddressesRowChangeEvent(Billing_AddressesRow row, global::System.Data.DataRowAction action) {
+            public BillingAddressesRowChangeEvent(BillingAddressesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Billing_AddressesRow Row {
+            public BillingAddressesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4879,7 +4877,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Billing_AddressesTableAdapter : global::System.ComponentModel.Component {
+    public partial class BillingAddressesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
         
@@ -4893,7 +4891,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Billing_AddressesTableAdapter() {
+        public BillingAddressesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -4990,7 +4988,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Billing Addresses";
+            tableMapping.DataSetTable = "BillingAddresses";
             tableMapping.ColumnMappings.Add("Customer Email", "Customer Email");
             tableMapping.ColumnMappings.Add("Address", "Address");
             tableMapping.ColumnMappings.Add("City", "City");
@@ -5000,7 +4998,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `Billing Addresses` WHERE (((? = 1 AND `Customer Email` IS NULL) OR (`Customer Email` = ?)) AND (`Address` = ?) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Country` IS NULL) OR (`Country` = ?)) AND ((? = 1 AND `Area/Zip Code` IS NULL) OR (`Area/Zip Code` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `BillingAddresses` WHERE (((? = 1 AND `Customer Email` IS NULL) OR (`Customer Email` = ?)) AND (`Address` = ?) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Country` IS NULL) OR (`Country` = ?)) AND ((? = 1 AND `Area/Zip Code` IS NULL) OR (`Area/Zip Code` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Customer_Email", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Customer Email", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Customer_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Customer Email", global::System.Data.DataRowVersion.Original, false, null));
@@ -5015,8 +5013,8 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Area/Zip_Code", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Area/Zip Code", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Billing Addresses` (`Customer Email`, `Address`, `City`, `State`, `C" +
-                "ountry`, `Area/Zip Code`) VALUES (?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `BillingAddresses` (`Customer Email`, `Address`, `City`, `State`, `Co" +
+                "untry`, `Area/Zip Code`) VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Customer_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Customer Email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
@@ -5026,7 +5024,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Area/Zip_Code", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Area/Zip Code", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `Billing Addresses` SET `Customer Email` = ?, `Address` = ?, `City` = ?, `State` = ?, `Country` = ?, `Area/Zip Code` = ? WHERE (((? = 1 AND `Customer Email` IS NULL) OR (`Customer Email` = ?)) AND (`Address` = ?) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Country` IS NULL) OR (`Country` = ?)) AND ((? = 1 AND `Area/Zip Code` IS NULL) OR (`Area/Zip Code` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `BillingAddresses` SET `Customer Email` = ?, `Address` = ?, `City` = ?, `State` = ?, `Country` = ?, `Area/Zip Code` = ? WHERE (((? = 1 AND `Customer Email` IS NULL) OR (`Customer Email` = ?)) AND (`Address` = ?) AND ((? = 1 AND `City` IS NULL) OR (`City` = ?)) AND ((? = 1 AND `State` IS NULL) OR (`State` = ?)) AND ((? = 1 AND `Country` IS NULL) OR (`Country` = ?)) AND ((? = 1 AND `Area/Zip Code` IS NULL) OR (`Area/Zip Code` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Customer_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Customer Email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Address", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Address", global::System.Data.DataRowVersion.Current, false, null));
@@ -5060,8 +5058,8 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [Customer Email], Address, City, State, Country, [Area/Zip Code] FROM [Bil" +
-                "ling Addresses]";
+            this._commandCollection[0].CommandText = "SELECT [Customer Email], Address, City, State, Country, [Area/Zip Code] FROM Bill" +
+                "ingAddresses";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5069,7 +5067,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(_2060_Term_ProjectDataSet.Billing_AddressesDataTable dataTable) {
+        public virtual int Fill(_2060_Term_ProjectDataSet.BillingAddressesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5082,9 +5080,9 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual _2060_Term_ProjectDataSet.Billing_AddressesDataTable GetData() {
+        public virtual _2060_Term_ProjectDataSet.BillingAddressesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            _2060_Term_ProjectDataSet.Billing_AddressesDataTable dataTable = new _2060_Term_ProjectDataSet.Billing_AddressesDataTable();
+            _2060_Term_ProjectDataSet.BillingAddressesDataTable dataTable = new _2060_Term_ProjectDataSet.BillingAddressesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5092,7 +5090,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(_2060_Term_ProjectDataSet.Billing_AddressesDataTable dataTable) {
+        public virtual int Update(_2060_Term_ProjectDataSet.BillingAddressesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5100,7 +5098,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(_2060_Term_ProjectDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Billing Addresses");
+            return this.Adapter.Update(dataSet, "BillingAddresses");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6287,31 +6285,31 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Employees";
-            tableMapping.ColumnMappings.Add("E-mail", "E-mail");
+            tableMapping.ColumnMappings.Add("Email", "Email");
             tableMapping.ColumnMappings.Add("Password", "Password");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Employees` WHERE ((`E-mail` = ?) AND ((? = 1 AND `Password` IS NULL)" +
-                " OR (`Password` = ?)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Employees` WHERE ((`Email` = ?) AND ((? = 1 AND `Password` IS NULL) " +
+                "OR (`Password` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_E-mail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "E-mail", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Password", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Employees` (`E-mail`, `Password`) VALUES (?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Employees` (`Email`, `Password`) VALUES (?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("E-mail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "E-mail", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `Employees` SET `E-mail` = ?, `Password` = ? WHERE ((`E-mail` = ?) AND ((?" +
-                " = 1 AND `Password` IS NULL) OR (`Password` = ?)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `Employees` SET `Email` = ?, `Password` = ? WHERE ((`Email` = ?) AND ((? =" +
+                " 1 AND `Password` IS NULL) OR (`Password` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("E-mail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "E-mail", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_E-mail", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "E-mail", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Email", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Email", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Password", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Password", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Password", global::System.Data.DataRowVersion.Original, false, null));
         }
@@ -6329,7 +6327,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [E-mail], [Password] FROM Employees";
+            this._commandCollection[0].CommandText = "SELECT Email, [Password] FROM Employees";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6390,12 +6388,12 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string _Original_E_mail, string Original_Password) {
-            if ((_Original_E_mail == null)) {
-                throw new global::System.ArgumentNullException("_Original_E_mail");
+        public virtual int Delete(string Original_Email, string Original_Password) {
+            if ((Original_Email == null)) {
+                throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(_Original_E_mail));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Email));
             }
             if ((Original_Password == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -6425,12 +6423,12 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string _E_mail, string Password) {
-            if ((_E_mail == null)) {
-                throw new global::System.ArgumentNullException("_E_mail");
+        public virtual int Insert(string Email, string Password) {
+            if ((Email == null)) {
+                throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(_E_mail));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Email));
             }
             if ((Password == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -6458,12 +6456,12 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string _E_mail, string Password, string _Original_E_mail, string Original_Password) {
-            if ((_E_mail == null)) {
-                throw new global::System.ArgumentNullException("_E_mail");
+        public virtual int Update(string Email, string Password, string Original_Email, string Original_Password) {
+            if ((Email == null)) {
+                throw new global::System.ArgumentNullException("Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(_E_mail));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Email));
             }
             if ((Password == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -6471,11 +6469,11 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Password));
             }
-            if ((_Original_E_mail == null)) {
-                throw new global::System.ArgumentNullException("_Original_E_mail");
+            if ((Original_Email == null)) {
+                throw new global::System.ArgumentNullException("Original_Email");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(_Original_E_mail));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_Email));
             }
             if ((Original_Password == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((object)(1));
@@ -6505,8 +6503,8 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Password, string _Original_E_mail, string Original_Password) {
-            return this.Update(_Original_E_mail, Password, _Original_E_mail, Original_Password);
+        public virtual int Update(string Password, string Original_Email, string Original_Password) {
+            return this.Update(Original_Email, Password, Original_Email, Original_Password);
         }
     }
     
@@ -8548,7 +8546,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private Billing_AddressesTableAdapter _billing_AddressesTableAdapter;
+        private BillingAddressesTableAdapter _billingAddressesTableAdapter;
         
         private Credit_CardsTableAdapter _credit_CardsTableAdapter;
         
@@ -8586,12 +8584,12 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public Billing_AddressesTableAdapter Billing_AddressesTableAdapter {
+        public BillingAddressesTableAdapter BillingAddressesTableAdapter {
             get {
-                return this._billing_AddressesTableAdapter;
+                return this._billingAddressesTableAdapter;
             }
             set {
-                this._billing_AddressesTableAdapter = value;
+                this._billingAddressesTableAdapter = value;
             }
         }
         
@@ -8726,9 +8724,9 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._billing_AddressesTableAdapter != null) 
-                            && (this._billing_AddressesTableAdapter.Connection != null))) {
-                    return this._billing_AddressesTableAdapter.Connection;
+                if (((this._billingAddressesTableAdapter != null) 
+                            && (this._billingAddressesTableAdapter.Connection != null))) {
+                    return this._billingAddressesTableAdapter.Connection;
                 }
                 if (((this._credit_CardsTableAdapter != null) 
                             && (this._credit_CardsTableAdapter.Connection != null))) {
@@ -8775,7 +8773,7 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._billing_AddressesTableAdapter != null)) {
+                if ((this._billingAddressesTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._credit_CardsTableAdapter != null)) {
@@ -8822,12 +8820,12 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._billing_AddressesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Billing_Addresses.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._billingAddressesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.BillingAddresses.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._billing_AddressesTableAdapter.Update(updatedRows));
+                    result = (result + this._billingAddressesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -8912,11 +8910,11 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._billing_AddressesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Billing_Addresses.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._billingAddressesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.BillingAddresses.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._billing_AddressesTableAdapter.Update(addedRows));
+                    result = (result + this._billingAddressesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9042,11 +9040,11 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._billing_AddressesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Billing_Addresses.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._billingAddressesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.BillingAddresses.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._billing_AddressesTableAdapter.Update(deletedRows));
+                    result = (result + this._billingAddressesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9097,8 +9095,8 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._billing_AddressesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._billing_AddressesTableAdapter.Connection) == false))) {
+            if (((this._billingAddressesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._billingAddressesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -9174,13 +9172,13 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._billing_AddressesTableAdapter != null)) {
-                    revertConnections.Add(this._billing_AddressesTableAdapter, this._billing_AddressesTableAdapter.Connection);
-                    this._billing_AddressesTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._billing_AddressesTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._billing_AddressesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._billing_AddressesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._billing_AddressesTableAdapter.Adapter);
+                if ((this._billingAddressesTableAdapter != null)) {
+                    revertConnections.Add(this._billingAddressesTableAdapter, this._billingAddressesTableAdapter.Connection);
+                    this._billingAddressesTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._billingAddressesTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._billingAddressesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._billingAddressesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._billingAddressesTableAdapter.Adapter);
                     }
                 }
                 if ((this._credit_CardsTableAdapter != null)) {
@@ -9313,9 +9311,9 @@ namespace POS_System._2060_Term_ProjectDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._billing_AddressesTableAdapter != null)) {
-                    this._billing_AddressesTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._billing_AddressesTableAdapter]));
-                    this._billing_AddressesTableAdapter.Transaction = null;
+                if ((this._billingAddressesTableAdapter != null)) {
+                    this._billingAddressesTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._billingAddressesTableAdapter]));
+                    this._billingAddressesTableAdapter.Transaction = null;
                 }
                 if ((this._credit_CardsTableAdapter != null)) {
                     this._credit_CardsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._credit_CardsTableAdapter]));

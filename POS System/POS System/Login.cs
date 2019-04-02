@@ -22,6 +22,8 @@ namespace POS_System
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            /*
             OleDbConnection connection = new OleDbConnection();
             connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\collinguidry\Source\Repos\termproject2060\POS System\POS System\2060 Term Project.mdb";
             connection.Open();
@@ -29,15 +31,12 @@ namespace POS_System
 
             /////////////////////////
             connection.Close();
+
+            */
         }
         private void DBConnect (object sender, EventArgs e)
         {
-            OleDbConnection connection = new OleDbConnection();
-            connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\collinguidry\Source\Repos\termproject2060\POS System\POS System\2060 Term Project.mdb";
-            connection.Open();
-            /////////////////////////
 
-            /////////////////////////
             
         }
 
@@ -66,52 +65,54 @@ namespace POS_System
             {
 
                 OleDbConnection connection = new OleDbConnection();
-                connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\collinguidry\Source\Repos\termproject2060\POS System\POS System\2060 Term Project.mdb";
+                connection.ConnectionString = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\collinguidry\source\repos\2060 project v2\POS System\POS System\2060 Term Project.mdb";
                 connection.Open();
                 /////////////////////////
 
                 OleDbCommand cmd_employee = new OleDbCommand("select * from Employees where Email = @a", connection);
                 cmd_employee.Parameters.AddWithValue("@a", Convert.ToString(textBox1.Text));
-                OleDbDataReader DR = cmd_employee.ExecuteReader();
-                Email = Convert.ToString(textBox1.Text); // employee email
+                OleDbDataReader DR_emp = cmd_employee.ExecuteReader();
 
                 OleDbCommand cmd_user = new OleDbCommand("select * from Customers where Email = @b", connection);
                 cmd_user.Parameters.AddWithValue("@b", Convert.ToString(textBox1.Text));
-                OleDbDataReader DR1 = cmd_user.ExecuteReader();
-                Email = Convert.ToString(textBox1.Text); // customer email
+                OleDbDataReader DR_user = cmd_user.ExecuteReader();
+               
 
 
-                string X = "", X1 = "";
-                while (DR.Read())
+                string Emp_Pass = "", User_Pass = "";
+                while (DR_emp.Read())
                 {
-                    X = DR["password"].ToString(); //Read a value from query
+                    Emp_Pass = DR_emp["Password"].ToString(); //Read a value from query
 
                 }
 
-                while (DR.Read())
+                while (DR_user.Read())
                 {
-                    X1 = DR1["password"].ToString(); //Read a value from query
+                    User_Pass = DR_user["Password"].ToString(); //Read a value from query
 
                 }
 
-                DR.Close();
-                DR1.Close();
+                DR_emp.Close();
+                DR_user.Close();
 
-                if (X == Convert.ToString(textBox2.Text)) //if password entered = password in database
+                if (Emp_Pass == Convert.ToString(textBox2.Text)) //if password entered = password in database
                 {
+                    MessageBox.Show("Entering employee view.");
                     this.Hide();
                     EmployeeView form = new EmployeeView();
                     form.Show();
                 }
                 else
-                 if (X1 == Convert.ToString(textBox2.Text))
+                 if (User_Pass == Convert.ToString(textBox2.Text))
                     {
-                        this.Hide();
-                        NewCustomerForm f2 = new NewCustomerForm();
+                    MessageBox.Show("Entering customer view.");
+                    this.Hide();
+                        CustomerView f2 = new CustomerView();
                         f2.Show();
                     }
                 else
                 {
+                    MessageBox.Show("Records did not match. please try again.");
                     this.Hide();
                     LoginForm f1 = new LoginForm();
                     f1.Show();
@@ -132,6 +133,11 @@ namespace POS_System
 
         private class Form1
         {
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

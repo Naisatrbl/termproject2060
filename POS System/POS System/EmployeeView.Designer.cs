@@ -33,7 +33,6 @@
             this._2060_Term_ProjectDataSet = new POS_System._2060_Term_ProjectDataSet();
             this.termProjectDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.billingAddressesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.billing_AddressesTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.Billing_AddressesTableAdapter();
             this.transactionsTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.TransactionsTableAdapter();
             this.itemsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter = new POS_System._2060_Term_ProjectDataSetTableAdapters.ItemsTableAdapter();
@@ -94,7 +93,7 @@
             // 
             // billing_AddressesTableAdapter
             // 
-            this.billing_AddressesTableAdapter.ClearBeforeFill = true;
+
             // 
             // transactionsTableAdapter
             // 
@@ -130,7 +129,6 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.Billing_AddressesTableAdapter = this.billing_AddressesTableAdapter;
             this.tableAdapterManager.Credit_CardsTableAdapter = null;
             this.tableAdapterManager.CustomersTableAdapter = this.customersTableAdapter;
             this.tableAdapterManager.EmployeesTableAdapter = this.employeesTableAdapter;
@@ -297,7 +295,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.transactionsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._2060_Term_ProjectDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.termProjectDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.billingAddressesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
@@ -312,7 +309,6 @@
         private System.Windows.Forms.BindingSource termProjectDataSetBindingSource;
         private _2060_Term_ProjectDataSet _2060_Term_ProjectDataSet;
         private System.Windows.Forms.BindingSource billingAddressesBindingSource;
-        private _2060_Term_ProjectDataSetTableAdapters.Billing_AddressesTableAdapter billing_AddressesTableAdapter;
         private System.Windows.Forms.BindingSource transactionsBindingSource;
         private _2060_Term_ProjectDataSetTableAdapters.TransactionsTableAdapter transactionsTableAdapter;
         private System.Windows.Forms.BindingSource itemsBindingSource;
