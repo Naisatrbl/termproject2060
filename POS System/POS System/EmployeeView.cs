@@ -21,9 +21,8 @@ namespace POS_System
 
         private void EmployeeView_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_2060_Term_ProjectDataSet.Employees' table. You can move, or remove it, as needed.
-            this.employeesTableAdapter.Fill(this._2060_Term_ProjectDataSet.Employees);
-
+           
+            
 
 
             OleDbConnection connection = new OleDbConnection();
@@ -31,15 +30,14 @@ namespace POS_System
             connection.Open();
 
 
-
+            
 
             MessageBox.Show("DB Connection Successful!!");
             connection.Close();
 
 
 
-
-
+            
 
             // TODO: This line of code loads data into the '_2060_Term_ProjectDataSet.Customers' table. You can move, or remove it, as needed.
             this.customersTableAdapter.Fill(this._2060_Term_ProjectDataSet.Customers);
@@ -47,8 +45,7 @@ namespace POS_System
             this.itemsTableAdapter.Fill(this._2060_Term_ProjectDataSet.Items);
             // TODO: This line of code loads data into the '_2060_Term_ProjectDataSet.Transactions' table. You can move, or remove it, as needed.
             this.transactionsTableAdapter.Fill(this._2060_Term_ProjectDataSet.Transactions);
-            // TODO: This line of code loads data into the '_2060_Term_ProjectDataSet.Billing_Addresses' table. You can move, or remove it, as needed.
-            this.billing_AddressesTableAdapter.Fill(this._2060_Term_ProjectDataSet.Billing_Addresses);
+
 
         }
     }
